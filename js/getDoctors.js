@@ -13,14 +13,19 @@ exports.getDoctors = function(medicalIssue) {
         this.distance = distance;
         this.location = location;
       }
-      // console.log(result.data[0].practices[0].name);
       arrayLength = result.data.length;
-      for (var counter = 0; counter = arrayLength; counter += 1) {
-        console.log(counter)
-      // new_doctor = Doctor(result.data[counter].practices[0].name, result.data[counter].profile.bio, result.data[counter].distance.toFixed(2), "lat: " + result.data[counter].practices[0].lat + ", lon: " + result.data[counter].practices[0].lon);
-      // doctors.push(new_doctor);
-      };
-      console.log(doctors);
+      for (i = 0; i < arrayLength; i++) {
+      var new_doctor = new Doctor(result.data[i].practices[0].name, result.data[i].profile.bio, result.data[i].practices[0].distance.toFixed(2), "lat: " + result.data[i].practices[0].lat + ", lon: " + result.data[i].practices[0].lon);
+      doctors.push(new_doctor);
+      }
+      doctors.forEach(function(doctor) {
+        $('#doctorList').append(doctor.name);
+        $('#doctorList').append("<br>");
+        $('#doctorList').append(doctor.bio);
+        $('#doctorList').append("<br>");
+        $('#doctorList').append(doctor.distance);
+        $('#doctorList').append(" miles away<br><br><br>");
+      });
     })
    .fail(function(error){
       console.log("fail");
