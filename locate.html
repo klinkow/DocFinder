@@ -8,6 +8,7 @@
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
     <link rel="stylesheet" href="css/styles.css">
+
     <meta charset="utf-8">
     <title>Doctor Finder</title>
   </head>
@@ -15,29 +16,16 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <nav>
       <div class="nav-wrapper">
-        <a class="brand-logo center">Doctor Finder</a>
+        <a href="index.html" class="brand-logo center">Doctor Finder</a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
         </ul>
       </div>
     </nav>
 
     <div class="row">
-      <form class="col s6 offset-s3">
-        <h5 style="text-align: center;">Enter an ailment:</h5>
-        <div class="row">
-          <div class="input-field col s12">
-            <div class="col s8">
-              <i class="material-icons prefix">my_location</i>
-              <input id="ailmentInput" type="text" class="validate">
-            </div>
-            <div class="col s4">
-              <a id="submit" class="waves-effect waves-light btn">Submit</a>
-            </div>
-          </div>
-        </div>
-      </form>
       <div class="col s6 offset-s3">
-        <div id="doctorList"></div>
+        <br>
+        <div id="map"></div>
       </div>
     </div>
   </body>
