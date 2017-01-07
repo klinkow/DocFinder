@@ -10,7 +10,7 @@ _Enter an ailment and this website will find you up to 20 physicians nearby that
 
 ## Setup/Installation Requirements
 
-* _Download the git repository from: [klinkow.github.io/DocFinder](https://klinkow.github.io/DocFinder)_
+* _Download the git repository from: [https://github.com/klinkow/DocFinder](https://github.com/klinkow/DocFinder)_
 
 * _Create a .env file in the root folder containing the following code with working api keys:_
 _exports.apiKey = "KEY GOES HERE"; [get API key from BetterDoctors]_
